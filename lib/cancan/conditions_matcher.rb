@@ -87,7 +87,7 @@ module CanCan
     end
 
     def conditions_empty?
-      @conditions == {} || @conditions.nil?
+      (@conditions.is_a?(Hash) && @conditions == {}) || @conditions.nil?
     end
   end
 end
